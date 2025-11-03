@@ -432,12 +432,16 @@ blockquote footer {
 }
 
 .pdf-btn {
-  border-radius: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
   margin-left: 10px;
-  padding: 6px 14px;
+  padding: 6px 16px;
   font-size: 1.25rem;
   font-weight: 600;
   letter-spacing: 0.02em;
+  line-height: 1.2;
   color: #ffffff !important;
   background: linear-gradient(135deg, var(--accent) 0%, #38bdf8 100%);
   border: none;
