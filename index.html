@@ -19,7 +19,11 @@
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 
   <!-- Google web fonts -->
-  <!-- 添加更多 Google 字体 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap"
+    rel="stylesheet">
 
   <!-- Font Awesome Web Icons -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -31,62 +35,14 @@
 
   <!-- Local styles -->
   <link rel="stylesheet" href="css/main.css">
-
-  <style>
-    .pdf-btn {
-      border-radius: 2px;
-      margin-left: 6px;
-      margin-top: 2px; /* 添加上间距 */
-      margin-bottom: 2px; /* 添加下间距 */
-      transition: transform 0.2s, background-color 0.2s;
-      color: white !important; /* 确保文字为白色 */
-      font-weight: bold; /* 文字加粗 */
-      padding: 1.5px 3px; /* 减小内边距，减少按钮高度 */
-      font-size: 11px; /* 调整字体大小 */
-    }
-
-    .pdf-btn:hover {
-      transform: scale(1.1);
-      background-color: #0056b3;
-    }
-
-    .pdf-btn:active {
-      transform: scale(0.9);
-      background-color: #004080;
-    }
-
-    .extra-news {
-      display: none;
-    }
-
-    .show-more {
-      cursor: pointer;
-      color: #333;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 14px;
-      text-indent: 15px; /* 缩进1个字符 */
-    }
-
-    .show-more i {
-      margin-right: 5px;
-    }
-    
-    .show-more:hover {
-      transform: translateX(3px);
-      color: #0056b3;
-    }
-
-    .show-more:active {
-      transform: translateX(2px) scale(0.95);
-      color: #004080;
-    }
-  </style>
 </head>
 
 <body>
-  <h1 align="center">Mingda HAN（韩明达）</h1>
-  <hr />
+  <header class="hero-banner" id="top">
+    <h1 class="hero-title">Mingda HAN（韩明达）</h1>
+    <p class="hero-subtitle">Ph.D. student in Computer Science whose research explores the frontiers of IoT sensing, AIoT, and
+      mobile security.</p>
+  </header>
 
   <!-- Navbar include -->
   <div w3-include-html="navbar.html"></div>
@@ -96,107 +52,120 @@
   <!-- Main content -->
   <div id="main-container" class="container">
     <div class="row">
-      <div class="col-sm-4">
-        <img class="center-block img img-responsive img-thumbnail" src="img/migda.png" alt="Image of Mingda Han">
+      <div class="col-lg-4 col-md-5">
+        <aside class="profile-card">
+          <img class="profile-avatar" src="img/migda.png" alt="Portrait of Mingda Han">
+          <h2 class="montserrat" id="title">Ph.D. Student</h2>
+          <p class="profile-meta" id="program">Computer Science &amp; Technology<br>Shandong University</p>
 
-        <p id="title">Ph.D Student<br>
-          <span id="program">Computer Science & Technology</span>
-        </p>
-
-        <table class="table" id="contact-table">
-          <tbody>
-            <tr>
-              <td style="width:30px"><i class="fas fa-home"></i></td>
-              <td>
+          <ul class="contact-list">
+            <li class="contact-item">
+              <span class="contact-icon" aria-hidden="true"><i class="fas fa-home"></i></span>
+              <div class="contact-body">
                 Shandong University,<br>
                 No.72 Binhai Road, Qingdao, China
-              </td>
-            </tr>
-            <tr>
-              <td><i class="fas fa-envelope"></i></td>
-              <td>
+              </div>
+            </li>
+            <li class="contact-item">
+              <span class="contact-icon" aria-hidden="true"><i class="fas fa-envelope"></i></span>
+              <div class="contact-body">
                 <a href="mailto:mingdhan@mail.sdu.edu.cn">mingdhan@mail.sdu.edu.cn</a>
-              </td>
-            </tr>
-            <tr>
-              <td><i class="ai ai-google-scholar-square"></i></td>
-              <td>
-                <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=Xylh47UAAAAJ" style="text-decoration: none;">Google Scholar</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+              </div>
+            </li>
+            <li class="contact-item">
+              <span class="contact-icon" aria-hidden="true"><i class="ai ai-google-scholar-square"></i></span>
+              <div class="contact-body">
+                <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=Xylh47UAAAAJ">Google Scholar</a>
+              </div>
+            </li>
+          </ul>
 
-        <!-- Script for clustrmaps and clstr_globe -->
-        <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=FkAxADqRJjf3Jp1aLDDH6ef1-e8pLY1wMH8HIFt8ogY"></script>
+          <div class="contact-divider"></div>
+
+          <!-- Script for clustrmaps and clstr_globe -->
+          <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=FkAxADqRJjf3Jp1aLDDH6ef1-e8pLY1wMH8HIFt8ogY"></script>
+        </aside>
       </div>
-      <div class="col-sm-8">
-       
-        <p>I am currently a Ph.D. student in the School of Computer Science and Technology at <a href="https://www.en.sdu.edu.cn/">Shandong University</a>, working under the supervision of Prof. <a href="https://perfecthu.github.io/">Pengfei Hu</a> and Prof. <a href="https://scholar.google.com/citations?user=O1yGhH0AAAAJ">Xiuzhen Cheng</a>. Prior to this, I worked in the Department of Computer Science at <a href="https://www.cityu.edu.hk/">City University of Hong Kong</a> under the guidance of Prof. <a href="https://www.weitaoxu.com/">Weitao Xu</a>. I received my B.E. and M.E. degrees from the School of Information Science and Engineering at <a href="https://english.sdnu.edu.cn/">Shandong Normal University</a> in June 2020 and June 2023, respectively.
+      <div class="col-lg-8 col-md-7">
 
-        <p>My research interests lie in the areas of the Internet of Things (IoT) and mobile computing, with a particular focus on smart sensing, AIoT, and IoT security, etc.</p>
+        <section class="section-card">
+          <div class="section-heading">
+            <span>About</span>
+          </div>
+          <p>I am currently a Ph.D. student in the School of Computer Science and Technology at <a href="https://www.en.sdu.edu.cn/">Shandong University</a>, working under the supervision of Prof. <a href="https://perfecthu.github.io/">Pengfei Hu</a> and Prof. <a href="https://scholar.google.com/citations?user=O1yGhH0AAAAJ">Xiuzhen Cheng</a>. Prior to this, I worked in the Department of Computer Science at <a href="https://www.cityu.edu.hk/">City University of Hong Kong</a> under the guidance of Prof. <a href="https://www.weitaoxu.com/">Weitao Xu</a>. I received my B.E. and M.E. degrees from the School of Information Science and Engineering at <a href="https://english.sdnu.edu.cn/">Shandong Normal University</a> in June 2020 and June 2023, respectively.</p>
+          <p class="section-lead">My research interests lie in the areas of the Internet of Things (IoT) and mobile computing, with a particular focus on smart sensing, AIoT, and IoT security.</p>
+        </section>
 
-        <!-- Experience -->
-        <h3 class="push-down-3"><span>Experience</span></h3>
-        <ul id="Experience">
-          <li>
-            Ph.D student Major in Computer Science and Technology, 2023.09 - Present<br>
-            <span class="university"><em>Shandong University</em></span>
-          </li>
-          <li>
-            Research Assistant in Computer Science, 2022.01 - 2023.05<br>
-            <span class="university"><em>City University of Hong Kong</em></span>
-          </li>
-          <li>
-            M.E. Major in Communication and Information System, 2020.09 - 2023.06<br>
-            <span class="university"><em>Shandong Normal University</em></span>
-          </li>
-          <li>
-            B.E. Major in Communication Engineering, 2016.09 - 2020.06<br>
-            <span class="university"> <em>Shandong Normal University</em></span>
-          </li>
-        </ul>
+        <section class="section-card">
+          <div class="section-heading">
+            <span>Experience</span>
+          </div>
+          <ul class="experience-list">
+            <li class="experience-item">
+              Ph.D. student, Computer Science and Technology, 2023.09 - Present
+              <span class="university"><em>Shandong University</em></span>
+            </li>
+            <li class="experience-item">
+              Research Assistant, Computer Science, 2022.01 - 2023.05
+              <span class="university"><em>City University of Hong Kong</em></span>
+            </li>
+            <li class="experience-item">
+              M.E. in Communication and Information System, 2020.09 - 2023.06
+              <span class="university"><em>Shandong Normal University</em></span>
+            </li>
+            <li class="experience-item">
+              B.E. in Communication Engineering, 2016.09 - 2020.06
+              <span class="university"><em>Shandong Normal University</em></span>
+            </li>
+          </ul>
+        </section>
 
+        <section class="section-card">
+          <div class="section-heading">
+            <span>News</span>
+          </div>
+          <ul class="news-list" id="news">
+            <li>2025.11 One paper has been accepted by <b>ACM SenSys 2026</b>.</li>
+            <li>2025.03 Two papers have been accepted by <b>IEEE ICDCS 2025</b>.</li>
+            <li>2024.12 One paper has been accepted by <b>IEEE INFOCOM 2025</b>.</li>
+            <li>2024.09 Serve on the Artifact Evaluation Committee for ACM SenSys’24 and ACM CCS'24.</li>
+            <li class="extra-news">2024.03 One paper has been accepted by <b>IEEE TMC</b>.</li>
+            <li class="extra-news">2024.08 Our paper <b>REHSense</b> has been accepted by <b>ACM MobiHoc 2024</b>.</li>
+            <li class="extra-news">2023.10 Our paper <b>XGait</b> has been accepted by <b>ACM SenSys 2023</b>.</li>
+            <li class="extra-news">2023.07 Our paper <b>W4S</b> has been accepted by <b>ACM MobiHoc 2023</b>.</li>
+            <li class="extra-news">2023.06 Our paper <b>mmSign</b> has been accepted by <b>ACM TOSN</b>.</li>
+          </ul>
+          <p class="show-more"><i class="fas fa-caret-down"></i> Show more</p>
+        </section>
 
+        <section class="section-card">
+          <div class="section-heading">
+            <span>Publications</span>
+          </div>
+          <p class="footnote"><sup>†</sup> These authors contributed equally to this work.</p>
+          <ul class="publications" id="publications">
+            <li class="publication-item"><b>[ICDCS' 2025]</b> Xianglong Zhang, Haoming Luo, <b>Mingda Han</b>, Qihao Dong, Guoming Zhang, Yanni Yang, Qianli Li, and Pengfei Hu, "InverCRS: Generative Audio Inversion Attack in Collaborative Recognition Systems", Proceedings of the 2025 IEEE International Conference on Distributed Computing Systems (IEEE ICDCS 2025). <a href="papers/ICDCS25-InverCRS.pdf" class="pdf-btn">PDF</a></li>
+            <li class="publication-item"><b>[ICDCS' 2025]</b> Chaoqun Li, Rongsheng Fan, Hesong Wang, <b>Mingda Han</b>, Si Wu, Feng Li, and Pengfei Hu, "TSAJS: Efficient Multi-Server Joint Task Scheduling Scheme for Mobile Edge Computing", Proceedings of the 2025 IEEE International Conference on Distributed Computing Systems (IEEE ICDCS 2025). <a href="papers/ICDCS25-TSAJS.pdf" class="pdf-btn">PDF</a></li>
+            <li class="publication-item"><b>[INFOCOM' 2025]</b> Huanqi Yang, <b>Mingda Han</b>, Xinyue Li, Di Duan, Tianxing Li, and Weitao Xu, "iRadar: Synthesizing Millimeter-Waves from Wearable Inertial Inputs for Human Gesture Sensing", Proceedings of the 2025 IEEE Conference on Computer Communications (IEEE INFOCOM 2025). <a href="papers/INFOCOM25-iRadar.pdf" class="pdf-btn">PDF</a></li>
+            <li class="publication-item"><b>[TMC]</b> <b>Mingda Han</b>, Huanqi Yang, Mingda Jia, Weitao Xu, Yanni Yang, Zhijian Huang, Jun Luo, Xiuzhen Cheng, and Pengfei Hu, "Seeing the Invisible: Recovering Surveillance Video with COTS mmWave Radar", IEEE Transactions on Mobile Computing, August 2024. <a href="papers/TMC24-m2Vision.pdf" class="pdf-btn">PDF</a></li>
+            <li class="publication-item"><b>[MobiHoc' 2024]</b> To Ni, Zehua Sun, <b>Mingda Han</b>, Guohao Lan, Yaxiong Xie, Zhenjiang Li, Tao Gu, and Weitao Xu, "REHSense: Towards Battery-Free Wireless Sensing via Radio Frequency Energy Harvesting", Proceedings of the 25th International Symposium on Theory, Algorithmic Foundations, and Protocol Design for Mobile Networks and Mobile Computing (ACM MobiHoc 2024). <a href="papers/MobiHoc24-REHSense.pdf" class="pdf-btn">PDF</a></li>
+            <li class="publication-item"><b>[SenSys' 2023]</b> Huanqi Yang, <b>Mingda Han</b>, Mingda Jia, Zehua Sun, Pengfei Hu, Yu Zhang, Tao Gu, and Weitao Xu, "XGait: Cross-Modal Translation via Deep Generative Sensing for RF-based Gait Recognition", Proceedings of the 21th ACM Conference on Embedded Networked Sensor Systems (ACM SenSys 2023). <a href="papers/Sensys23-XGait.pdf" class="pdf-btn">PDF</a></li>
+            <li class="publication-item"><b>[MobiHoc' 2023]</b> Huanqi Yang<sup>†</sup>, <b>Mingda Han</b><sup>†</sup>, Shuyao Shi, Zhenyu Yan, Guoliang Xing, Jianping Wang, and Weitao Xu, "Wave-for-Safe: Multisensor-based Mutual Authentication for Unmanned Delivery Vehicle Services", Proceedings of the 24th International Symposium on Theory, Algorithmic Foundations, and Protocol Design for Mobile Networks and Mobile Computing (ACM MobiHoc 2023). <a href="papers/MobiHoc23-W4S.pdf" class="pdf-btn">PDF</a></li>
+            <li class="publication-item"><b>[TOSN]</b> <b>Mingda Han</b>, Huanqi Yang, Tao Ni, Di Duan, Mengzhe Ruan, Yongliang Chen, Jia Zhang, Weitao Xu. "mmSign: mmWave-based Few-Shot Online Handwritten Signature Verification", ACM Transactions on Sensor Networks, June 2023. <a href="papers/TOSN-mmSign.pdf" class="pdf-btn">PDF</a></li>
+            <li class="publication-item"><b>[ICPR' 2022]</b> <b>Mingda Han</b>, Linlin Guo, Jia Zhang, Hui Ji, Zihan Diao, Jiande Sun. "WiID: Precise WiFi-based Person Identification via Bio-electromagnetic Information", Proceedings of the 26th International Conference on Pattern Recognition (ICPR 2022). <a href="papers/ICPR22-WiID.pdf" class="pdf-btn">PDF</a></li>
+          </ul>
+        </section>
 
-        <!-- News Section -->
-        <h3 class="push-down-3"><span>News</span></h3>
-        <ul id="news">
-          <li>2025.11 One paper has been accepted by <b>ACM SenSys 2026</b>.</li>
-          <li>2025.03 Two papers have been accepted by <b>IEEE ICDCS 2025</b>.</li>
-          <li>2024.12 One paper has been accepted by <b>IEEE INFOCOM 2025</b>.</li>
-          <li>2024.09 Serve on the Artifact Evaluation Committee for ACM SenSys’24 and ACM CCS'24.</li>
-          <li class="extra-news">2024.03 One paper has been accepted by <b>IEEE TMC</b>.</li>
-          <li class="extra-news">2024.08 Our paper <b>REHSense</b> has been accepted by <b>ACM MobiHoc 2024</b>.</li>
-          <li class="extra-news">2023.10 Our paper <b>XGait</b> has been accepted by <b>ACM SenSys 2023</b>.</li>
-          <li class="extra-news">2023.07 Our paper <b>W4S</b> has been accepted by <b>ACM MobiHoc 2023</b>.</li>
-          <li class="extra-news">2023.06 Our paper <b>mmSign</b> has been accepted by <b>ACM TOSN</b>.</li>
-
-        </ul>
-        <p class="show-more"><i class="fas fa-caret-down"></i> Show more</p>
-
-        <!-- Publications Section -->
-        <h3 class="push-down-3"><span>Publications</span></h3>
-        <p class="footnote"><sup>†</sup> These authors contributed equally to this work.</p>
-        <ul id="publications">
-          <li><b>[ICDCS' 2025]</b> Xianglong Zhang, Haoming Luo, <b>Mingda Han</b>, Qihao Dong, Guoming Zhang, Yanni Yang, Qianli Li, and Pengfei Hu, "InverCRS: Generative Audio Inversion Attack in Collaborative Recognition Systems", Proceedings of the 2025 IEEE International Conference on Distributed Computing Systems (IEEE ICDCS 2025). <a href="papers/ICDCS25-InverCRS.pdf" class="btn btn-primary btn-xs pdf-btn">PDF</a></li>
-          <li><b>[ICDCS' 2025]</b> Chaoqun Li, Rongsheng Fan, Hesong Wang, <b>Mingda Han</b>, Si Wu, Feng Li, and Pengfei Hu, "TSAJS: Efficient Multi-Server Joint Task Scheduling Scheme for Mobile Edge Computing", Proceedings of the 2025 IEEE International Conference on Distributed Computing Systems (IEEE ICDCS 2025). <a href="papers/ICDCS25-TSAJS.pdf" class="btn btn-primary btn-xs pdf-btn">PDF</a></li>
-          <li><b>[INFOCOM' 2025]</b> Huanqi Yang, <b>Mingda Han</b>, Xinyue Li, Di Duan, Tianxing Li, and Weitao Xu, "iRadar: Synthesizing Millimeter-Waves from Wearable Inertial Inputs for Human Gesture Sensing", Proceedings of the 2025 IEEE Conference on Computer Communications (IEEE INFOCOM 2025). <a href="papers/INFOCOM25-iRadar.pdf" class="btn btn-primary btn-xs pdf-btn">PDF</a></li>
-          <li><b>[TMC]</b> <b>Mingda Han</b>, Huanqi Yang, Mingda Jia, Weitao Xu, Yanni Yang, Zhijian Huang, Jun Luo, Xiuzhen Cheng, and Pengfei Hu, "Seeing the Invisible: Recovering Surveillance Video with COTS mmWave Radar", IEEE Transactions on Mobile Computing, August 2024. <a href="papers/TMC24-m2Vision.pdf" class="btn btn-primary btn-xs pdf-btn">PDF</a></li>
-          <li><b>[MobiHoc' 2024]</b> To Ni, Zehua Sun, <b>Mingda Han</b>, Guohao Lan, Yaxiong Xie, Zhenjiang Li, Tao Gu, and Weitao Xu, "REHSense: Towards Battery-Free Wireless Sensing via Radio Frequency Energy Harvesting", Proceedings of the 25th International Symposium on Theory, Algorithmic Foundations, and Protocol Design for Mobile Networks and Mobile Computing (ACM MobiHoc 2024). <a href="papers/MobiHoc24-REHSense.pdf" class="btn btn-primary btn-xs pdf-btn">PDF</a></li>
-          <li><b>[SenSys' 2023]</b> Huanqi Yang, <b>Mingda Han</b>, Mingda Jia, Zehua Sun, Pengfei Hu, Yu Zhang, Tao Gu, and Weitao Xu, "XGait: Cross-Modal Translation via Deep Generative Sensing for RF-based Gait Recognition", Proceedings of the 21th ACM Conference on Embedded Networked Sensor Systems (ACM SenSys 2023). <a href="papers/Sensys23-XGait.pdf" class="btn btn-primary btn-xs pdf-btn">PDF</a></li>
-          <li><b>[MobiHoc' 2023]</b> Huanqi Yang<sup>†</sup>, <b>Mingda Han</b><sup>†</sup>, Shuyao Shi, Zhenyu Yan, Guoliang Xing, Jianping Wang, and Weitao Xu, "Wave-for-Safe: Multisensor-based Mutual Authentication for Unmanned Delivery Vehicle Services", Proceedings of the 24th International Symposium on Theory, Algorithmic Foundations, and Protocol Design for Mobile Networks and Mobile Computing (ACM MobiHoc 2023).<a href="papers/MobiHoc23-W4S.pdf" class="btn btn-primary btn-xs pdf-btn">PDF</a></li>
-          <li><b>[TOSN]</b> <b>Mingda Han</b>, Huanqi Yang, Tao Ni, Di Duan, Mengzhe Ruan, Yongliang Chen, Jia Zhang, Weitao Xu. "mmSign: mmWave-based Few-Shot Online Handwritten Signature Verification", ACM Transactions on Sensor Networks, June 2023.<a href="papers/TOSN-mmSign.pdf" class="btn btn-primary btn-xs pdf-btn">PDF</a></li>
-          <li><b>[ICPR' 2022]</b> <b>Mingda Han</b>, Linlin Guo, Jia Zhang, Hui Ji, Zihan Diao, Jiande Sun. "WiID: Precise WiFi-based Person Identification via Bio-electromagnetic Information", Proceedings of the 26th International Conference on Pattern Recognition (ICPR 2022).<a href="papers/ICPR22-WiID.pdf" class="btn btn-primary btn-xs pdf-btn">PDF</a></li>
-        </ul>
-
-        <!-- Services Section -->
-        <h3 class="push-down-3"><span>Services</span></h3>
-        <ul id="services">
-          <li><b>Artifact Evaluation Committee:</b> ACM CCS 2024, 2025; ACM SenSys 2024; USENIX Security 25; NDSS 2025</li>
-          <li><b>Journal Reviewer:</b> IEEE TMC, IEEE TWC, IEEE TDSC</li>
-          <li><b>Conference Reviewer:</b> ESORICS 2023</li>
-        </ul>
+        <section class="section-card">
+          <div class="section-heading">
+            <span>Services</span>
+          </div>
+          <ul class="services-list" id="services">
+            <li><b>Artifact Evaluation Committee:</b> ACM CCS 2024, 2025; ACM SenSys 2024; USENIX Security 25; NDSS 2025</li>
+            <li><b>Journal Reviewer:</b> IEEE TMC, IEEE TWC, IEEE TDSC</li>
+            <li><b>Conference Reviewer:</b> ESORICS 2023</li>
+          </ul>
+        </section>
       </div>
     </div>
   </div>
