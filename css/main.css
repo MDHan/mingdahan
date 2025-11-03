@@ -173,7 +173,34 @@ blockquote footer {
 #main-container {
   max-width: 1080px;
   margin: 0 auto 4rem;
-  padding: 0 1.5rem 4rem;
+  padding: 0 1rem 4rem;
+}
+
+@media (min-width: 1200px) {
+  #main-container {
+    max-width: 1240px;
+  }
+}
+
+@media (min-width: 992px) {
+  #main-container .row {
+    display: flex;
+    gap: 2rem;
+  }
+
+  #main-container .profile-column,
+  #main-container .content-column {
+    float: none;
+  }
+
+  #main-container .profile-column {
+    flex: 0 0 360px;
+    max-width: 360px;
+  }
+
+  #main-container .content-column {
+    flex: 1 1 0;
+  }
 }
 
 .profile-card,
