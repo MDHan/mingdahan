@@ -228,8 +228,12 @@ blockquote footer {
 
 .contact-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 1.2rem;
+}
+
+.contact-item:first-child {
+  align-items: flex-start;
 }
 
 .contact-icon {
@@ -249,6 +253,11 @@ blockquote footer {
   font-size: 1.45rem;
   color: var(--text-dark);
   line-height: 1.6;
+  text-align: left;
+}
+
+.contact-list {
+  text-align: left;
 }
 
 .contact-body a {
@@ -308,7 +317,7 @@ blockquote footer {
 
 .experience-item {
   position: relative;
-  padding-left: 2.8rem;
+  padding-left: 3.6rem;
   margin-bottom: 2.2rem;
 }
 
