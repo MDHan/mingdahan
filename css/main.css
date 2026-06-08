@@ -361,17 +361,19 @@ blockquote footer {
 
 .experience-item {
   position: relative;
-  padding-left: 3.6rem;
-  margin-bottom: 2.2rem;
+  padding-left: 3rem;
+  margin-bottom: 1.65rem;
+  font-size: 1.42rem;
+  line-height: 1.5;
 }
 
 .experience-item::before {
   content: "";
   position: absolute;
-  left: 1rem;
+  left: 0.85rem;
   top: 0.35rem;
-  width: 14px;
-  height: 14px;
+  width: 11px;
+  height: 11px;
   border-radius: 50%;
   background: var(--accent);
   box-shadow: 0 0 0 6px rgba(15, 118, 110, 0.12);
@@ -380,9 +382,9 @@ blockquote footer {
 .experience-item::after {
   content: "";
   position: absolute;
-  left: 1.63rem;
-  top: 1.5rem;
-  bottom: -2.2rem;
+  left: 1.35rem;
+  top: 1.35rem;
+  bottom: -1.65rem;
   width: 2px;
   background: linear-gradient(180deg, rgba(15, 118, 110, 0.25), transparent);
 }
@@ -394,29 +396,31 @@ blockquote footer {
 .experience-item span {
   display: block;
   color: var(--text-muted);
-  margin-top: 0.8rem;
+  margin-top: 0.45rem;
+  font-size: 1.36rem;
 }
 
 .news-list {
   border-left: 2px solid rgba(15, 118, 110, 0.22);
-  padding-left: 2.2rem;
+  padding-left: 1.8rem;
 }
 
 .news-list li {
   position: relative;
-  margin-bottom: 1.6rem;
-  line-height: 1.65;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  line-height: 1.5;
 }
 
 .news-list li::before {
   content: "";
   position: absolute;
-  width: 11px;
-  height: 11px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   background: var(--accent);
-  left: -2.8rem;
-  top: 0.5rem;
+  left: -2.35rem;
+  top: 0.55rem;
   box-shadow: 0 0 0 4px rgba(15, 118, 110, 0.14);
 }
 
@@ -427,9 +431,9 @@ blockquote footer {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  font-size: 1.4rem;
+  font-size: 1.32rem;
   font-weight: 600;
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
